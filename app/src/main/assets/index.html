@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123d32">
+<title>صدقة جارية | محمد معوض</title>
+<link rel="manifest" href="manifest.json">
+<style>
+:root{--green:#123d32;--green2:#1d5a49;--gold:#d7b56d;--cream:#f6f4ed;--ink:#1d2d28;--muted:#68766f;--white:#fff;--line:#e2e7df}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+header{background:linear-gradient(135deg,#0c2d26,#1d5a49);color:white;padding:30px 18px 26px;text-align:center;border-bottom:4px solid var(--gold)}
+.logo{font-size:28px;color:var(--gold)}header h1{margin:3px 0;font-size:clamp(25px,5vw,38px)}header p{margin:6px auto;max-width:650px;color:#e4eee8}
+nav{display:flex;gap:8px;overflow:auto;padding:12px;position:sticky;top:0;background:#f6f4edf2;backdrop-filter:blur(8px);z-index:5;border-bottom:1px solid var(--line)}
+nav button{white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:9px 14px;background:white;color:var(--green);font-weight:bold;cursor:pointer}
+nav button.active,button.primary{background:var(--green);color:white;border-color:var(--green)}
+main{max-width:1050px;margin:22px auto;padding:0 15px 40px}.panel{display:none}.panel.active{display:block}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:0 7px 24px #153b2c0a}
+h2{margin:0 0 12px;color:var(--green);font-size:23px}h3{margin:0 0 8px;color:var(--green)}
+.hero{background:linear-gradient(135deg,#fff,#f0f4ec);text-align:center;border-color:#e4d6b6}
+.arabic{font-family:"Amiri","Traditional Arabic",serif;font-size:25px;line-height:2.15;text-align:center;color:#243e32}
+.small{font-size:13px;color:var(--muted)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.row>*{flex:1}
+button,select,input{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:#fff;color:var(--green);font-weight:bold}
+button:hover{filter:brightness(.97)}button:disabled{opacity:.5;cursor:not-allowed}
+.counter{text-align:center;background:#f7f8f3;border-radius:16px;padding:20px;margin:12px 0}
+.count{font-size:48px;color:var(--green);font-weight:bold;direction:ltr}
+.tap{width:145px;height:145px;border-radius:50%;background:var(--green);color:white;font-size:24px;border:7px solid #d9e5d9;box-shadow:0 8px 0 #0b2a22}
+.dhikr{padding:15px 0;border-bottom:1px solid var(--line)}.dhikr:last-child{border:0}.dhikr .arabic{text-align:right;font-size:23px}
+.dhikr button{margin-top:8px}.pill{display:inline-block;background:#eef3eb;color:var(--green);padding:3px 10px;border-radius:20px;font-size:13px}
+input,select{border:1px solid var(--line);border-radius:10px;padding:10px;background:white;max-width:100%}
+select{width:100%}audio{width:100%;margin-top:12px}
+.mushaf-page{background:#fffdf5;border:1px solid #d8c79c;border-radius:8px;padding:12px;margin-top:16px;box-shadow:inset 0 0 0 4px #f3ead2}
+.mushaf-frame{border:1px solid #d8c79c;min-height:470px;padding:18px 16px 34px;position:relative;background:repeating-linear-gradient(0deg,#fffdf5,#fffdf5 34px,#f7f0dd 35px)}
+.mushaf-title{text-align:center;color:#735b27;font-weight:bold;border-bottom:1px solid #d8c79c;padding-bottom:8px;margin-bottom:12px}
+.mushaf-text{font-family:"Traditional Arabic","Amiri",serif;font-size:27px;line-height:2.15;text-align:justify;color:#172e23}
+.mushaf-text .verse{display:inline;border:0;padding:0}.mushaf-text .arabic{display:inline;font-size:27px;line-height:2.15}
+.mushaf-footer{position:absolute;bottom:4px;left:0;right:0;text-align:center;color:#735b27;font-size:13px}
+.surahlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px;margin-top:12px}
+.surahlist button{text-align:right}
+.verse{padding:12px 4px;border-bottom:1px solid var(--line)}.verse .arabic{font-size:26px}
+.prayer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px}.prayer{background:#f5f7f1;border-radius:12px;padding:12px;text-align:center}.prayer b{display:block;color:var(--green)}
+.notice{padding:12px;border-radius:12px;background:#fff7e4;border:1px solid #efdfb5;color:#5f4c20}
+footer{text-align:center;color:var(--muted);padding:25px 12px;font-size:13px}
+@media(max-width:560px){header{padding:24px 14px}.card{padding:16px}.arabic{font-size:22px}.count{font-size:40px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">۞</div>
+<h1>صدقة جارية على روح</h1>
+<h1 style="color:#e8ca83">محمد معوض</h1>
+<p>اللهم اغفر له وارحمه، ونوّر قبره، واجعل القرآن والذكر في ميزان حسناته، واجمعنا به في جنات النعيم.</p>
+</header>
+<nav id="nav">
+<button class="active" data-tab="home">الرئيسية</button><button data-tab="tasbeeh">السبحة</button><button data-tab="quran">المصحف</button><button data-tab="adhkar">الأذكار</button><button data-tab="prayer">مواقيت الصلاة</button><button data-tab="settings">التنبيهات والإعدادات</button>
+</nav>
+<main>
+<section id="home" class="panel active">
+<div class="card hero"><span class="pill">نية الصدقة الجارية</span><h2 style="margin-top:10px">اذكروا محمد بدعوة طيبة 🤍</h2><p class="arabic">اللهم اجعل قبره روضةً من رياض الجنة، وآنس وحشته، وارفع درجته، واجعل ما يُقرأ ويُذكر هنا نورًا ورحمةً له.</p><p class="small">يمكنك قراءة الأذكار والمصحف المحفوظ، والتسبيح، والاستماع للتلاوة عند الاتصال بالإنترنت.</p></div>
+<div class="row"><div class="card"><h3>السبحة الإلكترونية</h3><p>سبّح واستغفر واحتسب الأجر.</p><button class="primary" onclick="showTab('tasbeeh')">ابدأ التسبيح</button></div><div class="card"><h3>أذكار اليوم</h3><p>أذكار الصباح والمساء والنوم والاستيقاظ وبعد الصلاة.</p><button class="primary" onclick="showTab('adhkar')">افتح الأذكار</button></div></div>
+<div class="card"><h2>آية اليوم</h2><p class="arabic">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</p><p class="small">سورة الرعد — ٢٨</p></div>
+<div class="card"><h2>دعاء للمتوفى</h2><p class="arabic">اللهم اغفر لمحمد معوض وارحمه، وعافه واعفُ عنه، وأكرم نزله، ووسّع مدخله، واغسله بالماء والثلج والبرد، ونقّه من الخطايا كما نقيت الثوب الأبيض من الدنس.</p></div>
+</section>
+<section id="tasbeeh" class="panel">
+<div class="card"><h2>السبحة الإلكترونية</h2><p>اختر الذكر واضغط على الدائرة مع كل تسبيحة. يُحفظ العدد على هذا الجهاز.</p>
+<select id="tasbeehType"><option>سبحان الله</option><option>الحمد لله</option><option>الله أكبر</option><option>أستغفر الله</option><option>لا إله إلا الله</option><option>اللهم صلِّ على محمد</option></select>
+<div class="counter"><div class="small">عدد التسبيحات</div><div id="count" class="count">0</div><button id="tap" class="tap">سبّح</button><div class="row" style="margin-top:18px"><button id="minus">− واحدة</button><button id="reset">تصفير العداد</button></div></div><p class="small">العداد مستقل لكل جلسة/ذكر، ويمكن تصفيره وقتما تشاء.</p></div>
+</section>
+<section id="quran" class="panel">
+<div class="card"><h2>المصحف الشريف</h2><p class="small">عرض صفحات المصحف بتنسيق قريب من صفحات المصحف الورقي. اختر السورة أو انتقل بين الصفحات، واستمع لتلاوة الشيخ محمد صديق المنشاوي عند الاتصال بالإنترنت.</p>
+<div class="row"><label for="surahSelect">السورة</label><select id="surahSelect"><option value="1">الفاتحة</option></select></div>
+<div class="row" style="margin-top:10px"><button id="prevPage">الصفحة السابقة</button><button class="primary" id="loadSurah">عرض السورة</button><button id="nextPage">الصفحة التالية</button></div>
+<div class="row" style="margin-top:10px"><button id="playSurah">استمع للمنشاوي</button><span id="pageLabel" class="small">صفحة 1</span></div>
+<audio id="audio" controls preload="none"></audio><div id="quranStatus" class="small" aria-live="polite"></div>
+<div id="mushafPage" class="mushaf-page"><div class="mushaf-frame"><div id="pageTitle" class="mushaf-title">سورة الفاتحة</div><div id="verses" class="mushaf-text"></div><div id="mushafFooter" class="mushaf-footer">١</div></div></div>
+</div>
+</section>
+<section id="adhkar" class="panel">
+<div class="card"><h2>الأذكار</h2><p>اضغط «تم الذكر» لمتابعة العدد. التقدم يُحفظ على جهازك.</p><div class="row"><label for="adhkarType">نوع الأذكار</label><select id="adhkarType"><option value="morning">أذكار الصباح</option><option value="evening">أذكار المساء</option><option value="sleep">أذكار النوم</option><option value="wake">أذكار الاستيقاظ</option><option value="after">أذكار بعد الصلاة</option></select></div><div id="adhkarList"></div></div>
+</section>
+<section id="prayer" class="panel">
+<div class="card"><h2>مواقيت الصلاة</h2><p>استخدم موقعك لحساب المواقيت، أو أدخل المدينة يدويًا. يلزم الإنترنت لتحديث المواقيت.</p><div class="row"><button class="primary" id="useLocation">استخدم موقعي</button><input id="city" value="Kafr El Sheikh" aria-label="المدينة" placeholder="المدينة بالإنجليزية"><button id="citySearch">احسب بالمدينة</button></div><p id="prayerStatus" class="small" aria-live="polite">لم يتم تحديد الموقع بعد.</p><div id="prayerDate"></div><div id="prayerTimes" class="prayer-grid"></div><div class="notice" style="margin-top:14px">تنبيه: قد تختلف المواقيت قليلًا حسب طريقة الحساب والجهة المحلية. راجع تقويم المسجد القريب منك.</div></div>
+</section>
+<section id="settings" class="panel">
+<div class="card"><h2>التنبيهات</h2><p>يمكنك السماح بإشعارات المتصفح عند فتح الموقع. الإشعارات الدورية الدقيقة حتى مع إغلاق الموقع تحتاج إلى تثبيت/استضافة تدعم خصائص التطبيق، كما أن دعمها يختلف بين الأجهزة والمتصفحات.</p><button class="primary" id="notifyBtn">تفعيل إشعارات المتصفح</button><p id="notifyStatus" class="small"></p><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><button id="installHelp">كيف أثبّت الموقع؟</button><p id="installText" class="small"></p></div>
+</section>
+</main>
+<footer>صدقة جارية على روح محمد معوض — اللهم ارحمه رحمةً واسعةً وأسكنه فسيح جناتك.</footer>
+<script>
+const $=id=>document.getElementById(id);
+function showTab(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const safeGet=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}}, safeSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{}};
+let tasCount=safeGet('tasCount',0);$('count').textContent=tasCount;
+$('tap').onclick=()=>{tasCount++;safeSet('tasCount',tasCount);$('count').textContent=tasCount};
+$('minus').onclick=()=>{tasCount=Math.max(0,tasCount-1);safeSet('tasCount',tasCount);$('count').textContent=tasCount};
+$('reset').onclick=()=>{tasCount=0;safeSet('tasCount',0);$('count').textContent=0};
+const adhkar={
+morning:[
+['أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',1],
+['اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ.',1],
+['سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.',100],
+['أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ.',100],
+['قُلْ هُوَ اللَّهُ أَحَدٌ، قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ، قُلْ أَعُوذُ بِرَبِّ النَّاسِ.',3]],
+evening:[
+['أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ.',1],
+['اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ.',1],
+['سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.',100],
+['قُلْ هُوَ اللَّهُ أَحَدٌ، قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ، قُلْ أَعُوذُ بِرَبِّ النَّاسِ.',3]],
+sleep:[
+['بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا.',1],
+['اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ.',3],
+['سُبْحَانَ اللَّهِ.',33],['الْحَمْدُ لِلَّهِ.',33],['اللَّهُ أَكْبَرُ.',34],
+['آية الكرسي: اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ... (اقرأ الآية كاملة من المصحف).',1]],
+wake:[
+['الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ.',1],
+['الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ.',1]],
+after:[
+['أَسْتَغْفِرُ اللَّهَ.',3],
+['اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ.',1],
+['سُبْحَانَ اللَّهِ.',33],['الْحَمْدُ لِلَّهِ.',33],['اللَّهُ أَكْبَرُ.',33],
+['لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',1]]
+};
+function renderAdhkar(){let type=$('adhkarType').value;let progress=safeGet('adhkarProgress_'+type,{});$('adhkarList').innerHTML='';adhkar[type].forEach((item,i)=>{let done=progress[i]||0;let d=document.createElement('div');d.className='dhikr';let p=document.createElement('p');p.className='arabic';p.textContent=item[0];let info=document.createElement('div');info.className='small';info.textContent=`المطلوب: ${item[1]} | تم: ${done}`;let btn=document.createElement('button');btn.className='primary';btn.textContent=done>=item[1]?'اكتمل ✓':'تم الذكر ('+(done)+'/'+item[1]+')';btn.onclick=()=>{progress[i]=Math.min(item[1],(progress[i]||0)+1);safeSet('adhkarProgress_'+type,progress);renderAdhkar()};let reset=document.createElement('button');reset.textContent='إعادة';reset.style.marginRight='8px';reset.onclick=()=>{progress[i]=0;safeSet('adhkarProgress_'+type,progress);renderAdhkar()};d.append(p,info,btn,reset);$('adhkarList').append(d)})}
+$('adhkarType').onchange=renderAdhkar;renderAdhkar();
+
+let surahs=[], currentSurahData=null, currentPage=1;
+async function loadSurahList(){try{let cached=safeGet('surahList',null);if(cached)surahs=cached;else{let r=await fetch('https://api.alquran.cloud/v1/surah');if(!r.ok)throw 0;surahs=(await r.json()).data;safeSet('surahList',surahs)}$('surahSelect').innerHTML='';surahs.forEach(s=>{let o=document.createElement('option');o.value=s.number;o.textContent=`${s.number}. ${s.name}`;$('surahSelect').append(o)})}catch{$('quranStatus').textContent='تعذّر تحميل قائمة السور. اتصل بالإنترنت ثم أعد المحاولة.'}}
+async function getSurah(n){let c=safeGet('cachedSurahData',{});if(c[n])return c[n];let r=await fetch(`https://api.alquran.cloud/v1/surah/${n}`);if(!r.ok)throw 0;let data=(await r.json()).data;c[n]=data;safeSet('cachedSurahData',c);return data}
+function renderMushafPage(page){if(!currentSurahData)return;let perPage=10;let start=(page-1)*perPage;let list=currentSurahData.ayahs.slice(start,start+perPage);if(!list.length){currentPage=1;return renderMushafPage(1)}currentPage=page;$('pageLabel').textContent=`صفحة ${currentPage} — عرض تقريبي`; $('pageTitle').textContent=currentSurahData.name;$('mushafFooter').textContent=String(currentPage);$('verses').innerHTML='';list.forEach(a=>{let span=document.createElement('span');span.className='verse';span.textContent=a.text+' ('+a.numberInSurah+') ';$('verses').append(span)});$('prevPage').disabled=currentPage<=1;$('nextPage').disabled=start+perPage>=currentSurahData.ayahs.length}
+async function showSurah(){let n=$('surahSelect').value;$('quranStatus').textContent='جارٍ تحميل السورة…';$('verses').innerHTML='';try{currentSurahData=await getSurah(n);$('quranStatus').textContent=`${currentSurahData.name} — ${currentSurahData.numberOfAyahs} آية`;renderMushafPage(1)}catch{$('quranStatus').textContent='تعذّر تحميل السورة. اتصل بالإنترنت ثم حاول مرة أخرى.'}}
+$('loadSurah').onclick=showSurah;$('surahSelect').onchange=showSurah;$('prevPage').onclick=()=>renderMushafPage(currentPage-1);$('nextPage').onclick=()=>renderMushafPage(currentPage+1);
+$('playSurah').onclick=()=>{let n=String($('surahSelect').value).padStart(3,'0');$('audio').src=`https://everyayah.com/data/Minshawy_Murattal_128kbps/${n}001.mp3`;$('audio').play().catch(()=>{$('quranStatus').textContent='اضغط تشغيل في مشغل الصوت بعد الاتصال بالإنترنت.'})};
+loadSurahList().then(()=>showSurah());
+
+async function prayerByCoords(lat,lon,label){$('prayerStatus').textContent='جارٍ حساب المواقيت…';try{let url=`https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lon}&method=5`;let r=await fetch(url);if(!r.ok)throw 0;let j=(await r.json()).data;$('prayerDate').textContent=`${label||'موقعك'} — ${j.date.readable} (طريقة الحساب: أم القرى)`;$('prayerTimes').innerHTML='';[['الفجر','Fajr'],['الشروق','Sunrise'],['الظهر','Dhuhr'],['العصر','Asr'],['المغرب','Maghrib'],['العشاء','Isha']].forEach(([ar,en])=>{let d=document.createElement('div');d.className='prayer';let b=document.createElement('b');b.textContent=ar;let t=document.createElement('span');t.textContent=j.timings[en];d.append(b,t);$('prayerTimes').append(d)});$('prayerStatus').textContent='تم تحديث المواقيت.'}catch{$('prayerStatus').textContent='تعذّر جلب المواقيت. تحقق من الاتصال وحاول مرة أخرى.'}}
+$('useLocation').onclick=()=>{if(!navigator.geolocation){$('prayerStatus').textContent='المتصفح لا يدعم تحديد الموقع.';return}navigator.geolocation.getCurrentPosition(p=>prayerByCoords(p.coords.latitude,p.coords.longitude,'موقعك الحالي'),()=>{$('prayerStatus').textContent='لم نتمكن من الوصول للموقع. اسمح بإذن الموقع أو ابحث باسم المدينة.'},{enableHighAccuracy:true,timeout:12000})};
+$('citySearch').onclick=async()=>{let city=$('city').value.trim();if(!city)return;$('prayerStatus').textContent='جارٍ البحث عن المدينة…';try{let r=await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(city)}`);let a=await r.json();if(!a.length)throw 0;prayerByCoords(a[0].lat,a[0].lon,city)}catch{$('prayerStatus').textContent='لم نعثر على المدينة. جرّب كتابة اسمها بالإنجليزية.'}};
+$('notifyBtn').onclick=async()=>{if(!('Notification'in window)){$('notifyStatus').textContent='هذا المتصفح لا يدعم الإشعارات.';return}try{let p=await Notification.requestPermission();$('notifyStatus').textContent=p==='granted'?'تم السماح بالإشعارات. تذكّر أن الإشعارات المجدولة تحتاج إلى تثبيت/استضافة تدعم ذلك.':'لم يتم السماح بالإشعارات.';if(p==='granted')new Notification('صدقة جارية لمحمد معوض',{body:'اللهم اغفر له وارحمه. لا تنسَ الدعاء له.'})}catch{$('notifyStatus').textContent='تعذّر تفعيل الإشعارات.'}};
+$('installHelp').onclick=()=>{$('installText').textContent='لتثبيت الموقع كتطبيق: ارفع الملفات إلى استضافة HTTPS، ثم افتحه في Chrome أو Edge واختر «تثبيت التطبيق» من قائمة المتصفح.'};
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+</script>
+</body></html>

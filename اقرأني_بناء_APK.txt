@@ -1,0 +1,6 @@
+طريقة الحصول على APK بدون Android Studio:
+1) أنشئ حساب على github.com (مجاني) ثم New repository (اسم أي حاجة).
+2) ارفع كل محتويات هذا المجلد (Add file > Upload files) - بما فيها مجلد .github.
+3) افتح تبويب Actions > Build APK > Run workflow (أو يبدأ تلقائيًا بعد الرفع).
+4) بعد ما يخلص (3-5 دقائق) افتح التشغيل وحمّل الملف من Artifacts: SadaqaMohamed-apk
+   وجواه app-debug.apk.
